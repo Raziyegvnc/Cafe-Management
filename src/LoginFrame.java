@@ -32,7 +32,7 @@ public class LoginFrame {
         loginButton.setBounds(1173, 600, 150, 40);
         loginButton.setFont(new Font("Dubai",Font.BOLD,25));
         loginButton.setForeground(Color.WHITE);
-        loginButton.setBackground(new Color(93, 57, 11));
+        loginButton.setBackground(new Color(95, 57, 11));
         loginBaseLabel.add(loginButton);
 
         //SIGN UP
