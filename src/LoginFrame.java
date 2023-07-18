@@ -40,7 +40,7 @@ public class LoginFrame {
         signUpButton.setBounds(800, 600, 150, 40);
         signUpButton.setFont(new Font("Dubai",Font.BOLD,25));
         signUpButton.setForeground(Color.WHITE);
-        signUpButton.setBackground(new Color(93, 57, 11));
+        signUpButton.setBackground(new Color(95, 57, 11));
         loginBaseLabel.add(signUpButton);
 
         //EMAIL
