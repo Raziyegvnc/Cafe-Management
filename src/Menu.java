@@ -1,12 +1,10 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 
 public class Menu {
     JFrame menuFrame;
@@ -20,67 +18,75 @@ public class Menu {
     JLabel menuName;
     JLabel receiptName;
 
-    public Menu(){
+    public Menu() {
         menuFrame = new JFrame("MAIN PAGE");
         menuFrame.setLayout(null);
-        menuFrame.setSize(1920,1080);
+        menuFrame.setSize(1920, 1080);
         menuFrame.setLocationRelativeTo(null);
         menuFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         //IMAGE
         resim = new ImageIcon(getClass().getResource("Images/chill-jazz-coffee-thumbnai.jpg"));
         menuBaseLabel = new JLabel(resim);
-        menuBaseLabel.setBounds(0,0,1600,950);
+        menuBaseLabel.setBounds(0, 0, 1600, 950);
 
         //MENU PANEL
         panel = new JPanel();
         panel.setLayout(null);
-        panel.setBounds(10,10,1000,700);
+        panel.setBounds(10, 10, 1000, 700);
         panel.setBackground(new Color(155, 60, 8, 171));
         menuBaseLabel.add(panel);
 
         //RECEIPT PANEL
         receiptPanel = new JPanel();
         receiptPanel.setLayout(null);
-        receiptPanel.setBounds(1050,10,450,764);
+        receiptPanel.setBounds(1050, 10, 450, 764);
         receiptPanel.setBackground(new Color(155, 60, 8, 252));
         menuBaseLabel.add(receiptPanel);
 
         //TOTAL BUTTON
         total = new JButton("TOTAL");
-        total.setBounds(250, 720, 150, 40);
-        total.setFont(new Font("Dubai",Font.BOLD,22));
+        total.setBounds(310, 720, 150, 40);
+        total.setFont(new Font("Dubai", Font.BOLD, 22));
         total.setForeground(Color.WHITE);
         total.setBackground(new Color(155, 60, 8, 252));
         menuBaseLabel.add(total);
 
         //RECEIPT BUTTON
         receipt = new JButton("RECEIPT");
-        receipt.setBounds(450, 720, 150, 40);
-        receipt.setFont(new Font("Dubai",Font.BOLD,22));
+        receipt.setBounds(550, 720, 150, 40);
+        receipt.setFont(new Font("Dubai", Font.BOLD, 22));
         receipt.setForeground(Color.WHITE);
         receipt.setBackground(new Color(155, 60, 8, 252));
         menuBaseLabel.add(receipt);
 
         //RESET BUTTON
         reset = new JButton("RESET");
-        reset.setBounds(650, 720, 150, 40);
-        reset.setFont(new Font("Dubai",Font.BOLD,22));
+        reset.setBounds(800, 720, 150, 40);
+        reset.setFont(new Font("Dubai", Font.BOLD, 22));
         reset.setForeground(Color.WHITE);
         reset.setBackground(new Color(155, 60, 8, 252));
         menuBaseLabel.add(reset);
 
+        //GERİ BUTONU
+        JButton backButton = new JButton("BACK");
+        backButton.setBounds(50, 720, 150, 40);
+        backButton.setFont(new Font("Dubai", Font.BOLD, 22));
+        backButton.setForeground(Color.WHITE);
+        backButton.setBackground(new Color(155, 60, 8, 252));
+        menuBaseLabel.add(backButton);
+
         //MENU NAME
         menuName = new JLabel("- - - - - - - - - - -  M  E  N  U  - - - - - - - - - - - - -");
-        menuName.setBounds(300,-10,500,100);
-        menuName.setFont(new Font("Niagara Solid",Font.BOLD,35));
+        menuName.setBounds(300, -10, 500, 100);
+        menuName.setFont(new Font("Niagara Solid", Font.BOLD, 35));
         menuName.setForeground(Color.WHITE);
         panel.add(menuName);
 
         //RECEIPT NAME
         receiptName = new JLabel("- - - - - A M E T H Y S T   C A F E - - - - - -");
-        receiptName.setBounds(50,-15,600,100);
-        receiptName.setFont(new Font("Niagara Solid",Font.BOLD,35));
+        receiptName.setBounds(50, -15, 600, 100);
+        receiptName.setFont(new Font("Niagara Solid", Font.BOLD, 35));
         receiptName.setForeground(Color.BLACK);
         receiptPanel.add(receiptName);
 
@@ -99,7 +105,7 @@ public class Menu {
 
         JLabel labe1 = new JLabel("DOPPIO");
         labe1.setForeground(new Color(255, 255, 255));
-        labe1.setFont(new Font("Elephant ",Font.BOLD,20));
+        labe1.setFont(new Font("Elephant ", Font.BOLD, 20));
         labe1.setBounds(170, -100, 200, 400);
         panel.add(labe1);
 
@@ -112,7 +118,7 @@ public class Menu {
         double priceInt1 = 5.95;
         JLabel price1Lab = new JLabel(String.valueOf(priceInt1) + " $");
         price1Lab.setForeground(Color.WHITE);
-        price1Lab.setFont(new Font("Engravers MT",Font.BOLD,20));
+        price1Lab.setFont(new Font("Engravers MT", Font.BOLD, 20));
         price1Lab.setBounds(250, -260, 400, 800);
         panel.add(price1Lab);
 
@@ -131,7 +137,7 @@ public class Menu {
 
         JLabel labe2 = new JLabel("MOCHA");
         labe2.setForeground(new Color(255, 255, 255));
-        labe2.setFont(new Font("Elephant ",Font.BOLD,20));
+        labe2.setFont(new Font("Elephant ", Font.BOLD, 20));
         labe2.setBounds(170, 70, 200, 400);
         panel.add(labe2);
 
@@ -144,7 +150,7 @@ public class Menu {
         double priceInt2 = 8.95;
         JLabel price2Lab = new JLabel(String.valueOf(priceInt2) + " $");
         price2Lab.setForeground(Color.WHITE);
-        price2Lab.setFont(new Font("Engravers MT",Font.BOLD,20));
+        price2Lab.setFont(new Font("Engravers MT", Font.BOLD, 20));
         price2Lab.setBounds(250, -90, 400, 800);
         panel.add(price2Lab);
 
@@ -163,7 +169,7 @@ public class Menu {
 
         JLabel labe3 = new JLabel("MACCHIATO");
         labe3.setForeground(new Color(255, 255, 255));
-        labe3.setFont(new Font("Elephant ",Font.BOLD,20));
+        labe3.setFont(new Font("Elephant ", Font.BOLD, 20));
         labe3.setBounds(170, 240, 550, 400);
         panel.add(labe3);
 
@@ -176,7 +182,7 @@ public class Menu {
         double priceInt3 = 9.99;
         JLabel price3Lab = new JLabel(String.valueOf(priceInt3) + " $");
         price3Lab.setForeground(Color.WHITE);
-        price3Lab.setFont(new Font("Engravers MT",Font.BOLD,20));
+        price3Lab.setFont(new Font("Engravers MT", Font.BOLD, 20));
         price3Lab.setBounds(250, 80, 400, 800);
         panel.add(price3Lab);
 
@@ -195,7 +201,7 @@ public class Menu {
 
         JLabel labe4 = new JLabel("CAPPUCCINO");
         labe4.setForeground(new Color(255, 255, 255));
-        labe4.setFont(new Font("Elephant ",Font.BOLD,20));
+        labe4.setFont(new Font("Elephant ", Font.BOLD, 20));
         labe4.setBounds(470, -100, 550, 400);
         panel.add(labe4);
 
@@ -208,12 +214,12 @@ public class Menu {
         double priceInt4 = 5.99;
         JLabel price4Lab = new JLabel(String.valueOf(priceInt4) + " $");
         price4Lab.setForeground(Color.WHITE);
-        price4Lab.setFont(new Font("Engravers MT",Font.BOLD,20));
+        price4Lab.setFont(new Font("Engravers MT", Font.BOLD, 20));
         price4Lab.setBounds(550, -260, 400, 800);
         panel.add(price4Lab);
 
         //IMAGE 5
-        String imgPath5= "/Images/image5.png";
+        String imgPath5 = "/Images/image5.png";
         ImageIcon imageIcon5 = new ImageIcon(getClass().getResource(imgPath5));
         Image image5 = imageIcon5.getImage().getScaledInstance(100, 125, Image.SCALE_SMOOTH);
         JLabel imagen5 = new JLabel(new ImageIcon(image5));
@@ -227,7 +233,7 @@ public class Menu {
 
         JLabel labe5 = new JLabel("FRAPPE");
         labe5.setForeground(Color.WHITE);
-        labe5.setFont(new Font(" Elephant",Font.BOLD,20));
+        labe5.setFont(new Font(" Elephant", Font.BOLD, 20));
         labe5.setBounds(470, 70, 250, 400);
         panel.add(labe5);
 
@@ -240,7 +246,7 @@ public class Menu {
         double priceInt5 = 5.5;
         JLabel price5Lab = new JLabel(String.valueOf(priceInt5) + " $");
         price5Lab.setForeground(Color.WHITE);
-        price5Lab.setFont(new Font("Engravers MT ",Font.BOLD,20));
+        price5Lab.setFont(new Font("Engravers MT ", Font.BOLD, 20));
         price5Lab.setBounds(550, -90, 400, 800);
         panel.add(price5Lab);
 
@@ -259,7 +265,7 @@ public class Menu {
 
         JLabel labe6 = new JLabel("IRISH ");
         labe6.setForeground(new Color(255, 255, 255));
-        labe6.setFont(new Font("Elephant ",Font.BOLD,20));
+        labe6.setFont(new Font("Elephant ", Font.BOLD, 20));
         labe6.setBounds(470, 240, 280, 400);
         panel.add(labe6);
 
@@ -272,7 +278,7 @@ public class Menu {
         int priceInt6 = 10;
         JLabel price6Lab = new JLabel(String.valueOf(priceInt6) + " $");
         price6Lab.setForeground(Color.WHITE);
-        price6Lab.setFont(new Font("Engravers MT",Font.BOLD,20));
+        price6Lab.setFont(new Font("Engravers MT", Font.BOLD, 20));
         price6Lab.setBounds(550, 80, 400, 800);
         panel.add(price6Lab);
 
@@ -291,7 +297,7 @@ public class Menu {
 
         JLabel labe7 = new JLabel("AMERICANO");
         labe7.setForeground(new Color(255, 255, 255));
-        labe7.setFont(new Font("Elephant ",Font.BOLD,20));
+        labe7.setFont(new Font("Elephant ", Font.BOLD, 20));
         labe7.setBounds(770, -100, 570, 400);
         panel.add(labe7);
 
@@ -304,12 +310,12 @@ public class Menu {
         double priceInt7 = 7.55;
         JLabel price7Lab = new JLabel(String.valueOf(priceInt7) + " $");
         price7Lab.setForeground(Color.WHITE);
-        price7Lab.setFont(new Font("Engravers MT",Font.BOLD,20));
+        price7Lab.setFont(new Font("Engravers MT", Font.BOLD, 20));
         price7Lab.setBounds(850, -260, 400, 800);
         panel.add(price7Lab);
 
         //IMAGE 8
-        String imgPath8= "/Images/image8.png";
+        String imgPath8 = "/Images/image8.png";
         ImageIcon imageIcon8 = new ImageIcon(getClass().getResource(imgPath8));
         Image image8 = imageIcon8.getImage().getScaledInstance(100, 125, Image.SCALE_SMOOTH);
         JLabel imagen8 = new JLabel(new ImageIcon(image8));
@@ -323,7 +329,7 @@ public class Menu {
 
         JLabel labe8 = new JLabel("LATTE");
         labe8.setForeground(Color.WHITE);
-        labe8.setFont(new Font(" Algerian",Font.BOLD,20));
+        labe8.setFont(new Font(" Algerian", Font.BOLD, 20));
         labe8.setBounds(770, 70, 200, 400);
         panel.add(labe8);
 
@@ -336,7 +342,7 @@ public class Menu {
         double priceInt8 = 5.80;
         JLabel price8Lab = new JLabel(String.valueOf(priceInt8) + " $");
         price8Lab.setForeground(Color.WHITE);
-        price8Lab.setFont(new Font("Engravers MT ",Font.BOLD,20));
+        price8Lab.setFont(new Font("Engravers MT ", Font.BOLD, 20));
         price8Lab.setBounds(850, -90, 400, 800);
         panel.add(price8Lab);
 
@@ -355,7 +361,7 @@ public class Menu {
 
         JLabel labe9 = new JLabel("EXPRESSO");
         labe9.setForeground(new Color(255, 255, 255));
-        labe9.setFont(new Font("Elephant ",Font.BOLD,20));
+        labe9.setFont(new Font("Elephant ", Font.BOLD, 20));
         labe9.setBounds(770, 240, 300, 400);
         panel.add(labe9);
 
@@ -368,7 +374,7 @@ public class Menu {
         double priceInt9 = 9.99;
         JLabel price9Lab = new JLabel(String.valueOf(priceInt9) + " $");
         price9Lab.setForeground(Color.WHITE);
-        price9Lab.setFont(new Font("Engravers MT",Font.BOLD,20));
+        price9Lab.setFont(new Font("Engravers MT", Font.BOLD, 20));
         price9Lab.setBounds(850, 80, 400, 800);
         panel.add(price9Lab);
 
@@ -376,20 +382,20 @@ public class Menu {
         //RECEIPT TASARIMI
         JLabel receiptNo = new JLabel("RECEIPT NO : ");
         receiptNo.setForeground(Color.BLACK);
-        receiptNo.setFont(new Font("Niagara Solid",Font.BOLD,25));
-        receiptNo.setBounds(20,60,200,50);
+        receiptNo.setFont(new Font("Niagara Solid", Font.BOLD, 25));
+        receiptNo.setBounds(20, 60, 200, 50);
         receiptPanel.add(receiptNo);
 
         JLabel receiptNonunki = new JLabel("200315075 ");
         receiptNonunki.setForeground(Color.WHITE);
-        receiptNonunki.setFont(new Font("Niagara Solid",Font.PLAIN,23));
-        receiptNonunki.setBounds(105,61,200,50);
+        receiptNonunki.setFont(new Font("Niagara Solid", Font.PLAIN, 23));
+        receiptNonunki.setBounds(105, 61, 200, 50);
         receiptPanel.add(receiptNonunki);
 
         JLabel date = new JLabel("DATE : ");
         date.setForeground(Color.BLACK);
-        date.setFont(new Font("Niagara Solid",Font.BOLD,25));
-        date.setBounds(200,60,200,50);
+        date.setFont(new Font("Niagara Solid", Font.BOLD, 25));
+        date.setBounds(200, 60, 200, 50);
         receiptPanel.add(date);
 
         JLabel actualDateLabel = new JLabel();
@@ -404,8 +410,8 @@ public class Menu {
 
         JLabel time = new JLabel("TIME : ");
         time.setForeground(Color.BLACK);
-        time.setFont(new Font("Niagara Solid",Font.BOLD,25));
-        time.setBounds(350,60,200,50);
+        time.setFont(new Font("Niagara Solid", Font.BOLD, 25));
+        time.setBounds(350, 60, 200, 50);
         receiptPanel.add(time);
 
         JLabel actualTimeLabel = new JLabel();
@@ -420,45 +426,45 @@ public class Menu {
 
         JPanel listOf = new JPanel();
         listOf.setLayout(null);
-        listOf.setBounds(15,130,418,30);
+        listOf.setBounds(15, 130, 418, 30);
         listOf.setBackground(new Color(245, 112, 8, 144));
         receiptPanel.add(listOf);
 
         //Panellerin Başlıkları
         JLabel listName = new JLabel(" List Of Items");
-        listName.setBounds(2,4,200,30);
+        listName.setBounds(2, 4, 200, 30);
         listName.setForeground(Color.WHITE);
-        listName.setFont(new Font("Dubai",Font.BOLD,20));
+        listName.setFont(new Font("Dubai", Font.BOLD, 20));
         listOf.add(listName);
 
         JLabel quantity = new JLabel(" Quantity");
-        quantity.setBounds(175,4,200,30);
+        quantity.setBounds(175, 4, 200, 30);
         quantity.setForeground(Color.WHITE);
-        quantity.setFont(new Font("Dubai",Font.BOLD,20));
+        quantity.setFont(new Font("Dubai", Font.BOLD, 20));
         listOf.add(quantity);
 
         JLabel amount = new JLabel(" Amount");
-        amount.setBounds(320,4,200,30);
+        amount.setBounds(320, 4, 200, 30);
         amount.setForeground(Color.WHITE);
-        amount.setFont(new Font("Dubai",Font.BOLD,20));
+        amount.setFont(new Font("Dubai", Font.BOLD, 20));
         listOf.add(amount);
 
         //Seçilen ürünlerin yazılacağı paneller
         JPanel chosenList = new JPanel();
-        chosenList.setLayout(new BoxLayout(chosenList,BoxLayout.Y_AXIS));
-        chosenList.setBounds(15,172,180,400);
+        chosenList.setLayout(new BoxLayout(chosenList, BoxLayout.Y_AXIS));
+        chosenList.setBounds(15, 172, 180, 400);
         chosenList.setBackground(new Color(255, 255, 255, 255));
         receiptPanel.add(chosenList);
 
         JPanel quantityList = new JPanel();
-        quantityList.setLayout(new BoxLayout(quantityList,BoxLayout.Y_AXIS));
-        quantityList.setBounds(185,172,140,400);
+        quantityList.setLayout(new BoxLayout(quantityList, BoxLayout.Y_AXIS));
+        quantityList.setBounds(185, 172, 140, 400);
         quantityList.setBackground(new Color(255, 255, 255, 255));
         receiptPanel.add(quantityList);
 
         JPanel amountList = new JPanel();
-        amountList.setLayout(new BoxLayout(amountList,BoxLayout.Y_AXIS));
-        amountList.setBounds(325,172,110,400);
+        amountList.setLayout(new BoxLayout(amountList, BoxLayout.Y_AXIS));
+        amountList.setBounds(325, 172, 110, 400);
         amountList.setBackground(new Color(255, 255, 255, 255));
         receiptPanel.add(amountList);
 
@@ -467,97 +473,97 @@ public class Menu {
         JLabel firstLabel2 = new JLabel();
         JLabel firstLabel3 = new JLabel();
 
-        JLabel secondLabel = new JLabel("     " +labe2.getText());
+        JLabel secondLabel = new JLabel("     " + labe2.getText());
         JLabel secondLabel2 = new JLabel();
         JLabel secondLabel3 = new JLabel();
 
-        JLabel thirdLabel = new JLabel("     " +labe3.getText());
+        JLabel thirdLabel = new JLabel("     " + labe3.getText());
         JLabel thirdLabel2 = new JLabel();
         JLabel thirdLabel3 = new JLabel();
 
-        JLabel fourthLabel = new JLabel("     " +labe4.getText());
+        JLabel fourthLabel = new JLabel("     " + labe4.getText());
         JLabel fourthLabel2 = new JLabel();
         JLabel fourthLabel3 = new JLabel();
 
-        JLabel fifthLabel = new JLabel("     " +labe5.getText());
+        JLabel fifthLabel = new JLabel("     " + labe5.getText());
         JLabel fifthLabel2 = new JLabel();
         JLabel fifthLabel3 = new JLabel();
 
-        JLabel sixthLabel = new JLabel("     " +labe6.getText());
+        JLabel sixthLabel = new JLabel("     " + labe6.getText());
         JLabel sixthLabel2 = new JLabel();
         JLabel sixthLabel3 = new JLabel();
 
-        JLabel seventhLabel = new JLabel("     " +labe7.getText());
+        JLabel seventhLabel = new JLabel("     " + labe7.getText());
         JLabel seventhLabel2 = new JLabel();
         JLabel seventhLabel3 = new JLabel();
 
-        JLabel eighthLabel = new JLabel("     " +labe8.getText());
+        JLabel eighthLabel = new JLabel("     " + labe8.getText());
         JLabel eighthLabel2 = new JLabel();
         JLabel eighthLabel3 = new JLabel();
 
-        JLabel ninthLabel = new JLabel("     " +labe9.getText());
+        JLabel ninthLabel = new JLabel("     " + labe9.getText());
         JLabel ninthLabel2 = new JLabel();
         JLabel ninthLabel3 = new JLabel();
 
         JPanel fiyatlar = new JPanel();
-        fiyatlar.setLayout( null);
+        fiyatlar.setLayout(null);
         fiyatlar.setBackground(new Color(208, 96, 8, 255));
-        fiyatlar.setBounds(165,584,270,150);
+        fiyatlar.setBounds(165, 584, 270, 150);
         receiptPanel.add(fiyatlar);
 
         JLabel totalAmount = new JLabel("TOTAL Amount: ");
-        totalAmount.setBounds(3,20,200,10);
+        totalAmount.setBounds(3, 20, 200, 10);
         totalAmount.setForeground(Color.BLACK);
-        totalAmount.setFont(new Font("Algerian",Font.BOLD,15));
+        totalAmount.setFont(new Font("Algerian", Font.BOLD, 15));
         fiyatlar.add(totalAmount);
 
         JLabel kdv = new JLabel("VAT Breakdown: ");
-        kdv.setBounds(3,70,200,10);
+        kdv.setBounds(3, 70, 200, 10);
         kdv.setForeground(Color.BLACK);
-        kdv.setFont(new Font("Algerian",Font.BOLD,15));
+        kdv.setFont(new Font("Algerian", Font.BOLD, 15));
         fiyatlar.add(kdv);
 
         JLabel netAmount = new JLabel("NET Amount: ");
-        netAmount.setBounds(3,120,200,10);
+        netAmount.setBounds(3, 120, 200, 10);
         netAmount.setForeground(Color.WHITE);
-        netAmount.setFont(new Font("Algerian",Font.BOLD,15));
+        netAmount.setFont(new Font("Algerian", Font.BOLD, 15));
         fiyatlar.add(netAmount);
 
         //RECEIPT BUTONU
         receipt.addActionListener(e -> {
 
             int spinnerValue = (Integer) spinner.getValue();
-            double amountValue =  spinnerValue * priceInt1;
+            double amountValue = spinnerValue * priceInt1;
 
             int spinnerValue2 = (Integer) spinner2.getValue();
-            double amountValue2 =  spinnerValue2 * priceInt2;
+            double amountValue2 = spinnerValue2 * priceInt2;
 
             int spinnerValue3 = (Integer) spinner3.getValue();
-            double amountValue3 =  spinnerValue3 * priceInt3;
+            double amountValue3 = spinnerValue3 * priceInt3;
 
             int spinnerValue4 = (Integer) spinner4.getValue();
-            double amountValue4 =  spinnerValue4 * priceInt4;
+            double amountValue4 = spinnerValue4 * priceInt4;
 
             int spinnerValue5 = (Integer) spinner5.getValue();
-            double amountValue5 =  spinnerValue5 * priceInt5;
+            double amountValue5 = spinnerValue5 * priceInt5;
 
             int spinnerValue6 = (Integer) spinner6.getValue();
-            double amountValue6 =  spinnerValue6 * priceInt6;
+            double amountValue6 = spinnerValue6 * priceInt6;
 
             int spinnerValue7 = (Integer) spinner7.getValue();
-            double amountValue7 =  spinnerValue7 * priceInt7;
+            double amountValue7 = spinnerValue7 * priceInt7;
 
             int spinnerValue8 = (Integer) spinner8.getValue();
-            double amountValue8 =  spinnerValue8 * priceInt8;
+            double amountValue8 = spinnerValue8 * priceInt8;
 
             int spinnerValue9 = (Integer) spinner9.getValue();
-            double amountValue9 =  spinnerValue9 * priceInt9;
+            double amountValue9 = spinnerValue9 * priceInt9;
 
             JLabel[] labels = {firstLabel, secondLabel, thirdLabel, fourthLabel, fifthLabel, sixthLabel, seventhLabel, eighthLabel, ninthLabel};
             JLabel[] quantityLabels = {firstLabel2, secondLabel2, thirdLabel2, fourthLabel2, fifthLabel2, sixthLabel2, seventhLabel2, eighthLabel2, ninthLabel2};
             JLabel[] amountLabels = {firstLabel3, secondLabel3, thirdLabel3, fourthLabel3, fifthLabel3, sixthLabel3, seventhLabel3, eighthLabel3, ninthLabel3};
             JSpinner[] spinners = {spinner, spinner2, spinner3, spinner4, spinner5, spinner6, spinner7, spinner8, spinner9};
-            double[] replace = {priceInt1,priceInt2, priceInt3,priceInt4,priceInt5, priceInt6,priceInt7, priceInt8, priceInt9};
+            double[] replace = {priceInt1, priceInt2, priceInt3, priceInt4, priceInt5, priceInt6, priceInt7, priceInt8, priceInt9};
 
             double totalin = 0.0;
 
@@ -581,7 +587,7 @@ public class Menu {
             amountLabels[7].setText("       " + amountValue8 + " $");
             amountLabels[8].setText("       " + amountValue9 + " $");
 
-            for(int i = 0; i < amountLabels.length; i++) {
+            for (int i = 0; i < amountLabels.length; i++) {
                 amountLabels[i].setForeground(new Color(0, 0, 0));
                 amountLabels[i].setMaximumSize(new Dimension(100, 30));
                 amountLabels[i].setPreferredSize(new Dimension(100, 30));
@@ -609,8 +615,7 @@ public class Menu {
                     chosenList.add(labels[i]);
                     quantityList.add(quantityLabels[i]);
                     amountList.add(amountLabels[i]);
-                }
-                else {
+                } else {
                     chosenList.remove(labels[i]);
                     quantityList.remove(quantityLabels[i]);
                     amountList.remove(amountLabels[i]);
@@ -641,8 +646,7 @@ public class Menu {
             if (toplam == 0) {
                 JOptionPane.showMessageDialog(null, "You have not chosen anything.", "WARNING", JOptionPane.WARNING_MESSAGE);
                 fiyatlar.removeAll();
-            }
-            else {
+            } else {
                 totalAmount1.setText(String.valueOf(toplam) + " $");
                 totalAmount1.setForeground(new Color(0, 0, 0, 255));
                 totalAmount1.setMaximumSize(new Dimension(100, 30));
@@ -655,7 +659,7 @@ public class Menu {
 
                 double kdvFiyat = 4.96;
 
-                totalAmount2.setText( String.valueOf(kdvFiyat)+ " $");
+                totalAmount2.setText(String.valueOf(kdvFiyat) + " $");
                 totalAmount2.setForeground(new Color(0, 0, 0, 255));
                 totalAmount2.setMaximumSize(new Dimension(100, 30));
                 totalAmount2.setFont(new Font("Dubai", Font.ITALIC, 20));
@@ -665,7 +669,7 @@ public class Menu {
                 totalAmount2.setOpaque(true);
                 totalAmount2.repaint();
 
-                totalAmount3.setText( String.valueOf(kdvFiyat + toplam)+ " $");
+                totalAmount3.setText(String.valueOf(kdvFiyat + toplam) + " $");
                 totalAmount3.setForeground(new Color(0, 0, 0, 255));
                 totalAmount3.setMaximumSize(new Dimension(100, 30));
                 totalAmount3.setFont(new Font("Dubai", Font.ITALIC, 20));
@@ -696,7 +700,29 @@ public class Menu {
                 totalAmount3.setText("");
             }
         });
+
+        //BACK BUTONUNUN İŞLEMLERİ
+        backButton.addActionListener(e -> {
+
+            LoginFrame loginFrame = null;
+            try {
+                loginFrame = new LoginFrame();
+            } catch (FontFormatException ex) {
+                throw new RuntimeException(ex);
+            }
+            loginFrame.loginFrame.setVisible(true);
+            menuFrame.setVisible(false);
+        });
+
+        //MENU PANELİNDE GÖZÜKECEK EKSTRALAR
+        JLabel exstra = new JLabel("HAVE A GOOD MEAL :)");
+
+
+
+
+
         menuFrame.add(menuBaseLabel);
         menuFrame.setVisible(true);
     }
+
 }

@@ -68,7 +68,7 @@ public class LoginFrame {
         loginPasswordLabel.setForeground(Color.WHITE);
         loginBaseLabel.add(loginPasswordLabel);
 
-        loginPassword = new JTextField();
+        loginPassword = new JPasswordField();
         loginPassword.setBounds(870, 472, 350, 35);
         loginPassword.setFont(new Font("Dubai",Font.ITALIC ,17));
         loginPassword.setForeground(Color.BLACK);
