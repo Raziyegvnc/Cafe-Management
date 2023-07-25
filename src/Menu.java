@@ -1,6 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.text.SimpleDateFormat;
@@ -631,6 +630,7 @@ public class Menu {
         JLabel totalAmount1 = new JLabel();
         JLabel totalAmount2 = new JLabel();
         JLabel totalAmount3 = new JLabel();
+
         //TOTAL BUTTON
         total.addActionListener(e -> {
             double toplam = priceInt1 * Integer.parseInt(spinner.getValue().toString())
@@ -715,10 +715,11 @@ public class Menu {
         });
 
         //MENU PANELİNDE GÖZÜKECEK EKSTRALAR
-        JLabel exstra = new JLabel("HAVE A GOOD MEAL :)");
-
-
-
+        JLabel exstra = new JLabel("HAVE A GOOD MEAL ");
+        exstra.setForeground(new Color(45, 26, 0));
+        exstra.setBounds(310, 580, 500, 100);
+        exstra.setFont(new Font("Niagara Solid", Font.BOLD, 80));
+        panel.add(exstra);
 
 
         menuFrame.add(menuBaseLabel);
