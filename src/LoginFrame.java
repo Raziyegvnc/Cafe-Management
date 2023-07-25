@@ -19,7 +19,7 @@ public class LoginFrame {
 
 
     public LoginFrame() throws FontFormatException {
-        //LABEL KISMI
+        //FRAME KISMI
         loginFrame = new JFrame("Log In");
         loginFrame.setSize(1920, 1080);
         loginFrame.setLocationRelativeTo(null);
@@ -132,6 +132,8 @@ public class LoginFrame {
                 loginFrame.setVisible(false);
             }
         });
+
+
 
         loginFrame.setVisible(true);
     }

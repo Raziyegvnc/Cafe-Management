@@ -3,6 +3,7 @@ public class Main {
 
         //new LoginFrame();
         //new SignUpFrame();
-        new Menu();
+        //new Menu();
+        new PayPage();
     }
 }

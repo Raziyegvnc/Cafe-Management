@@ -1,12 +1,16 @@
+import org.w3c.dom.ls.LSOutput;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Menu {
-    JFrame menuFrame;//R
+    JFrame menuFrame;
     JLabel menuBaseLabel;
     ImageIcon resim;
     JPanel panel;
@@ -16,6 +20,17 @@ public class Menu {
     JButton reset;
     JLabel menuName;
     JLabel receiptName;
+    //PayPage sınıfında toplam fiyatı kullanabilmek için oluşturduk
+    String sonuncuToplam = sonToplam;
+    private static String sonToplam;//Static kullandık çünkü bu sınıfın metoduna erişmesi için
+
+    public String getSonToplam() {
+        return sonToplam;
+    }
+
+    public void setSonToplam(String sonToplam) {
+        this.sonToplam = sonToplam;
+    }
 
     public Menu() {
         menuFrame = new JFrame("MAIN PAGE");
@@ -530,7 +545,7 @@ public class Menu {
 
             int spinnerValue = (Integer) spinner.getValue();
             double amountValue = spinnerValue * priceInt1;
-            String formatted = String.format("%2f", amountValue);//Sadece noktadan sonraki iki basamağı alıyor
+            String formatted = String.format("%3f", amountValue);//Sadece noktadan sonraki iki basamağı alıyor
 
             int spinnerValue2 = (Integer) spinner2.getValue();
             double amountValue2 = spinnerValue2 * priceInt2;
@@ -684,6 +699,9 @@ public class Menu {
                 fiyatlar.add(totalAmount3);
                 totalAmount3.setOpaque(true);
                 totalAmount3.repaint();
+
+                setSonToplam(String.valueOf(kdvFiyat + toplam));
+
             }
         });
 
@@ -720,6 +738,26 @@ public class Menu {
             menuFrame.setVisible(false);
         });
 
+        //PAY BUTTON
+        JButton payButton = new JButton("PAY");
+        payButton.setBounds(70, 720, 150, 40);
+        payButton.setFont(new Font("Dubai", Font.BOLD, 22));
+        payButton.setForeground(Color.WHITE);
+        payButton.setBackground(new Color(155, 60, 8, 252));
+        menuBaseLabel.add(payButton);
+
+        payButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                PayPage payPage = new PayPage();
+                menuFrame.setVisible(false);
+                payPage.payFrame.setVisible(true);
+
+            }
+        });
+
+
         //MENU PANELİNDE GÖZÜKECEK EKSTRA
         JLabel exstra = new JLabel("HAVE A GOOD MEAL ");
         exstra.setForeground(new Color(0, 0, 0));
@@ -738,5 +776,6 @@ public class Menu {
         menuFrame.add(menuBaseLabel);
         menuFrame.setVisible(true);
     }
+
 
 }
