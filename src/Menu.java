@@ -97,7 +97,7 @@ public class Menu {
         image1.setBounds(30, 70, 180, 150);
         panel.add(image1);
 
-        SpinnerModel spinnerModel = new SpinnerNumberModel(0, 0, 3, 1);
+        SpinnerModel spinnerModel = new SpinnerNumberModel(0, 0, 25, 1);
         JSpinner spinner = new JSpinner(spinnerModel);
         spinner.setBounds(170, 160, 70, 30);
         panel.add(spinner);
@@ -129,7 +129,7 @@ public class Menu {
         imagen2.setBounds(30, 240, 180, 150);
         panel.add(imagen2);
 
-        SpinnerModel spinnerModel2 = new SpinnerNumberModel(0, 0, 3, 1);
+        SpinnerModel spinnerModel2 = new SpinnerNumberModel(0, 0, 25, 1);
         JSpinner spinner2 = new JSpinner(spinnerModel2);
         spinner2.setBounds(170, 330, 70, 30);
         panel.add(spinner2);
@@ -161,7 +161,7 @@ public class Menu {
         imagen3.setBounds(30, 410, 180, 150);
         panel.add(imagen3);
 
-        SpinnerModel spinnerModel3 = new SpinnerNumberModel(0, 0, 3, 1);
+        SpinnerModel spinnerModel3 = new SpinnerNumberModel(0, 0, 25, 1);
         JSpinner spinner3 = new JSpinner(spinnerModel3);
         spinner3.setBounds(170, 500, 70, 30);
         panel.add(spinner3);
@@ -193,7 +193,7 @@ public class Menu {
         imagen4.setBounds(330, 70, 180, 150);
         panel.add(imagen4);
 
-        SpinnerModel spinnerModel4 = new SpinnerNumberModel(0, 0, 3, 1);
+        SpinnerModel spinnerModel4 = new SpinnerNumberModel(0, 0, 25, 1);
         JSpinner spinner4 = new JSpinner(spinnerModel4);
         spinner4.setBounds(470, 160, 70, 30);
         panel.add(spinner4);
@@ -225,7 +225,7 @@ public class Menu {
         imagen5.setBounds(330, 240, 180, 150);
         panel.add(imagen5);
 
-        SpinnerModel spinnerModel5 = new SpinnerNumberModel(0, 0, 3, 1);
+        SpinnerModel spinnerModel5 = new SpinnerNumberModel(0, 0, 25, 1);
         JSpinner spinner5 = new JSpinner(spinnerModel5);
         spinner5.setBounds(470, 330, 70, 30);
         panel.add(spinner5);
@@ -257,7 +257,7 @@ public class Menu {
         imagen6.setBounds(330, 450, 180, 150);
         panel.add(imagen6);
 
-        SpinnerModel spinnerModel6 = new SpinnerNumberModel(0, 0, 3, 1);
+        SpinnerModel spinnerModel6 = new SpinnerNumberModel(0, 0, 25, 1);
         JSpinner spinner6 = new JSpinner(spinnerModel6);
         spinner6.setBounds(470, 500, 70, 30);
         panel.add(spinner6);
@@ -289,7 +289,7 @@ public class Menu {
         imagen7.setBounds(630, 70, 180, 150);
         panel.add(imagen7);
 
-        SpinnerModel spinnerModel7 = new SpinnerNumberModel(0, 0, 3, 1);
+        SpinnerModel spinnerModel7 = new SpinnerNumberModel(0, 0, 25, 1);
         JSpinner spinner7 = new JSpinner(spinnerModel7);
         spinner7.setBounds(770, 160, 70, 30);
         panel.add(spinner7);
@@ -321,7 +321,7 @@ public class Menu {
         imagen8.setBounds(630, 240, 180, 150);
         panel.add(imagen8);
 
-        SpinnerModel spinnerModel8 = new SpinnerNumberModel(0, 0, 3, 1);
+        SpinnerModel spinnerModel8 = new SpinnerNumberModel(0, 0, 25, 1);
         JSpinner spinner8 = new JSpinner(spinnerModel8);
         spinner8.setBounds(770, 330, 70, 30);
         panel.add(spinner8);
@@ -353,7 +353,7 @@ public class Menu {
         imagen9.setBounds(630, 410, 180, 150);
         panel.add(imagen9);
 
-        SpinnerModel spinnerModel9 = new SpinnerNumberModel(0, 0, 3, 1);
+        SpinnerModel spinnerModel9 = new SpinnerNumberModel(0, 0, 25, 1);
         JSpinner spinner9 = new JSpinner(spinnerModel9);
         spinner9.setBounds(770, 500, 70, 30);
         panel.add(spinner9);
@@ -376,7 +376,6 @@ public class Menu {
         price9Lab.setFont(new Font("Engravers MT", Font.BOLD, 20));
         price9Lab.setBounds(850, 80, 400, 800);
         panel.add(price9Lab);
-
 
         //RECEIPT TASARIMI
         JLabel receiptNo = new JLabel("RECEIPT NO : ");
@@ -406,7 +405,6 @@ public class Menu {
         String currentDate = sdf.format(new Date());
         actualDateLabel.setText(currentDate);
 
-
         JLabel time = new JLabel("TIME : ");
         time.setForeground(Color.BLACK);
         time.setFont(new Font("Niagara Solid", Font.BOLD, 25));
@@ -421,7 +419,6 @@ public class Menu {
         SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm");
         String currentTime = timeFormat.format(new Date());
         actualTimeLabel.setText(currentTime);
-
 
         JPanel listOf = new JPanel();
         listOf.setLayout(null);
@@ -533,30 +530,39 @@ public class Menu {
 
             int spinnerValue = (Integer) spinner.getValue();
             double amountValue = spinnerValue * priceInt1;
+            String formatted = String.format("%2f", amountValue);//Sadece noktadan sonraki iki basamağı alıyor
 
             int spinnerValue2 = (Integer) spinner2.getValue();
             double amountValue2 = spinnerValue2 * priceInt2;
+            String formatted2 = String.format("%2f", amountValue2);
 
             int spinnerValue3 = (Integer) spinner3.getValue();
             double amountValue3 = spinnerValue3 * priceInt3;
+            String formatted3 = String.format("%2f", amountValue3);
 
             int spinnerValue4 = (Integer) spinner4.getValue();
             double amountValue4 = spinnerValue4 * priceInt4;
+            String formatted4 = String.format("%2f", amountValue4);
 
             int spinnerValue5 = (Integer) spinner5.getValue();
             double amountValue5 = spinnerValue5 * priceInt5;
+            String formatted5 = String.format("%2f", amountValue5);
 
             int spinnerValue6 = (Integer) spinner6.getValue();
             double amountValue6 = spinnerValue6 * priceInt6;
+            String formatted6 = String.format("%2f", amountValue6);
 
             int spinnerValue7 = (Integer) spinner7.getValue();
             double amountValue7 = spinnerValue7 * priceInt7;
+            String formatted7 = String.format("%2f", amountValue7);
 
             int spinnerValue8 = (Integer) spinner8.getValue();
             double amountValue8 = spinnerValue8 * priceInt8;
+            String formatted8 = String.format("%2f", amountValue8);
 
             int spinnerValue9 = (Integer) spinner9.getValue();
             double amountValue9 = spinnerValue9 * priceInt9;
+            String formatted9 = String.format("%2f", amountValue9);
 
             JLabel[] labels = {firstLabel, secondLabel, thirdLabel, fourthLabel, fifthLabel, sixthLabel, seventhLabel, eighthLabel, ninthLabel};
             JLabel[] quantityLabels = {firstLabel2, secondLabel2, thirdLabel2, fourthLabel2, fifthLabel2, sixthLabel2, seventhLabel2, eighthLabel2, ninthLabel2};
@@ -576,15 +582,15 @@ public class Menu {
             quantityLabels[7].setText("         " + spinnerValue8);
             quantityLabels[8].setText("         " + spinnerValue9);
 
-            amountLabels[0].setText("       " + amountValue + " $");
-            amountLabels[1].setText("       " + amountValue2 + " $");
-            amountLabels[2].setText("       " + amountValue3 + " $");
-            amountLabels[3].setText("       " + amountValue4 + " $");
-            amountLabels[4].setText("       " + amountValue5 + " $");
-            amountLabels[5].setText("       " + amountValue6 + " $");
-            amountLabels[6].setText("       " + amountValue7 + " $");
-            amountLabels[7].setText("       " + amountValue8 + " $");
-            amountLabels[8].setText("       " + amountValue9 + " $");
+            amountLabels[0].setText("       " + formatted + " $");
+            amountLabels[1].setText("       " + formatted2 + " $");
+            amountLabels[2].setText("       " + formatted3 + " $");
+            amountLabels[3].setText("       " + formatted4 + " $");
+            amountLabels[4].setText("       " + formatted5 + " $");
+            amountLabels[5].setText("       " + formatted6 + " $");
+            amountLabels[6].setText("       " + formatted7 + " $");
+            amountLabels[7].setText("       " + formatted8 + " $");
+            amountLabels[8].setText("       " + formatted9 + " $");
 
             for (int i = 0; i < amountLabels.length; i++) {
                 amountLabels[i].setForeground(new Color(0, 0, 0));
@@ -714,12 +720,19 @@ public class Menu {
             menuFrame.setVisible(false);
         });
 
-        //MENU PANELİNDE GÖZÜKECEK EKSTRALAR
+        //MENU PANELİNDE GÖZÜKECEK EKSTRA
         JLabel exstra = new JLabel("HAVE A GOOD MEAL ");
-        exstra.setForeground(new Color(45, 26, 0));
+        exstra.setForeground(new Color(0, 0, 0));
         exstra.setBounds(310, 580, 500, 100);
         exstra.setFont(new Font("Niagara Solid", Font.BOLD, 80));
         panel.add(exstra);
+
+        String amblem = "Images/cafe-icon-png-0.jpg";
+        ImageIcon ambIcon = new ImageIcon(getClass().getResource(amblem));
+        Image amb = ambIcon.getImage().getScaledInstance(100, 125, Image.SCALE_SMOOTH);
+        JLabel amblemResmi = new JLabel(new ImageIcon(amb));
+        amblemResmi.setBounds(1, 570, 150, 160);
+        receiptPanel.add(amblemResmi);
 
 
         menuFrame.add(menuBaseLabel);
