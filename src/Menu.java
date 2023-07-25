@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Menu {
-    JFrame menuFrame;
+    JFrame menuFrame;//R
     JLabel menuBaseLabel;
     ImageIcon resim;
     JPanel panel;
