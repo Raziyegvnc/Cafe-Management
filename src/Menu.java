@@ -60,7 +60,7 @@ public class Menu {
 
         //TOTAL BUTTON
         total = new JButton("TOTAL");
-        total.setBounds(310, 720, 150, 40);
+        total.setBounds(230, 720, 150, 40);
         total.setFont(new Font("Dubai", Font.BOLD, 22));
         total.setForeground(Color.WHITE);
         total.setBackground(new Color(155, 60, 8, 252));
@@ -68,7 +68,7 @@ public class Menu {
 
         //RECEIPT BUTTON
         receipt = new JButton("RECEIPT");
-        receipt.setBounds(550, 720, 150, 40);
+        receipt.setBounds(450, 720, 150, 40);
         receipt.setFont(new Font("Dubai", Font.BOLD, 22));
         receipt.setForeground(Color.WHITE);
         receipt.setBackground(new Color(155, 60, 8, 252));
@@ -76,7 +76,7 @@ public class Menu {
 
         //RESET BUTTON
         reset = new JButton("RESET");
-        reset.setBounds(800, 720, 150, 40);
+        reset.setBounds(650, 720, 150, 40);
         reset.setFont(new Font("Dubai", Font.BOLD, 22));
         reset.setForeground(Color.WHITE);
         reset.setBackground(new Color(155, 60, 8, 252));
@@ -84,7 +84,7 @@ public class Menu {
 
         //GERİ BUTONU
         JButton backButton = new JButton("BACK");
-        backButton.setBounds(50, 720, 150, 40);
+        backButton.setBounds(10, 720, 150, 40);
         backButton.setFont(new Font("Dubai", Font.BOLD, 22));
         backButton.setForeground(Color.WHITE);
         backButton.setBackground(new Color(155, 60, 8, 252));
@@ -740,7 +740,7 @@ public class Menu {
 
         //PAY BUTTON
         JButton payButton = new JButton("PAY");
-        payButton.setBounds(70, 720, 150, 40);
+        payButton.setBounds(860, 720, 150, 40);
         payButton.setFont(new Font("Dubai", Font.BOLD, 22));
         payButton.setForeground(Color.WHITE);
         payButton.setBackground(new Color(155, 60, 8, 252));
