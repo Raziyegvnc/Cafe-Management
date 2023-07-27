@@ -106,6 +106,7 @@ public class LoginFrame {
 
                         if (userName.equals(loginEmail.getText()) || password.equals(loginPassword.getText())) {
                             Menu menu = new Menu();
+                            loginFrame.setVisible(false);
                             menu.menuFrame.setVisible(true);
                             isLogin = true;
                             break;
@@ -116,7 +117,6 @@ public class LoginFrame {
                         String msj = "Please Check Your Email or Password";
                         JOptionPane.showMessageDialog(null, msj, "Error", JOptionPane.ERROR_MESSAGE);
                     }
-
                 } catch (SQLException ex) {
                     throw new RuntimeException(ex);
                 }

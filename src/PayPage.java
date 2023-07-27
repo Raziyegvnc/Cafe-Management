@@ -52,7 +52,7 @@ public class PayPage {
         toplamFiyat = new JLabel(menu.sonuncuToplam + " $");
         toplamFiyat.setBounds(320, 320, 600, 100);
         toplamFiyat.setFont(new Font("Niagara Solid", Font.ITALIC, 45));
-        toplamFiyat.setForeground(new Color(194, 116, 176));
+        toplamFiyat.setForeground(new Color(255, 188, 235));
         payPanel.add(toplamFiyat);
         payFrame.setVisible(true);
 
