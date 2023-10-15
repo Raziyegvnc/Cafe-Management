@@ -4,6 +4,6 @@ public class Main {
         new LoginFrame();
         //new SignUpFrame();
         //new Menu();
-        //new PayPage();
+        //new PayPage();ödeme
     }
 }
